@@ -17,7 +17,7 @@
 
 9.迭代法求x=根号a。求平方根的迭代公式为x(n+1）=1/2 * (xn+a/xn)
 
-  分析：牛顿迭代法 ：x(n+1) = x(n) - f(x(n)) / f'(x(n))( https://blog.csdn.net/SanyHo/article/details/106365314 )
+      分析：牛顿迭代法 ：x(n+1) = x(n) - f(x(n)) / f'(x(n))( https://blog.csdn.net/SanyHo/article/details/106365314 )
 
 10.用牛顿迭代法求下面方程在1.5近的根:2x的3次-4x的2次+3x-6=0
 
