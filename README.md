@@ -1,6 +1,8 @@
 # 100道C语言和数据结构基础练习
 
-链表  Linklist L;  有序顺序表 seqlist  A;
+**链表  Linklist L;= Lnode （*）L;  下一个L->next  L->data   前一个L->prior**
+
+**有序顺序表 seqlist  A;   A.length  A.data[i]**
 
 🎈1. **输入两个正整数 m 和 n，求其最大公约数和最小公倍数**
 
