@@ -2,11 +2,36 @@
 
 ## **前提：**
 
-**链表  Linklist L;= Lnode （*）L;  下一个L->next  L->data   前一个L->prior**
+### **链表的数据结构:**
+**常用:  Linklist L;= Lnode （*）L;      下一个:L->next   L->data   前一个:L->prior**
+```
+typedef int DataType;
 
-**有序顺序表 seqlist  A;   A.length  A.data[i]**
+// 链表节点结构
+typedef struct Lnode {
+    DataType data;           // 数据域
+    struct Lnode *next;     // 指向下一个节点的指针
+    struct Lnode *prior;    // 指向前一个节点的指针
+} Lnode, *Linklist;
+// 链表结构
+typedef struct {
+    Lnode *head;            // 链表头指针
+    int length;             // 链表长度
+} LinkList;
+```
+
+### **有序顺序表:**
+**常用: Seqlist  A;     A.length     A.data[i] **
+```
+typedef struct {
+    DataType *data;         // 数据数组
+    int length;             // 当前长度
+    int capacity;           // 容量
+} SeqList;
+```
 
 ### **树的数据结构:**
+**常用: T->lchild     T->rchild      T->data**
 ```
 typedef int DataType;
 typedef struct Bitnode {
