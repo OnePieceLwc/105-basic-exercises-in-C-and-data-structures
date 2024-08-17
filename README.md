@@ -6,13 +6,14 @@
 
 **有序顺序表 seqlist  A;   A.length  A.data[i]**
 
-### **数的数据结构:**
-
+### **树的数据结构:**
+```
 typedef int DataType;
 typedef struct Bitnode {
     DataType data;
     struct Bitnode *lchild, *rchild;
 } Bitnode, *Bitree;
+```
 
 ## **100道**
 
