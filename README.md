@@ -6,6 +6,14 @@
 
 **有序顺序表 seqlist  A;   A.length  A.data[i]**
 
+### **数的数据结构:**
+
+typedef int DataType;
+typedef struct Bitnode {
+    DataType data;
+    struct Bitnode *lchild, *rchild;
+} Bitnode, *Bitree;
+
 ## **100道**
 
 🎈1. **输入两个正整数 m 和 n，求其最大公约数和最小公倍数**
