@@ -21,7 +21,7 @@ typedef struct {
 ```
 
 ### **有序顺序表:**
-**常用: Seqlist  A;     A.length     A.data[i] **
+**常用: Seqlist  A;   A.length  A.data[i]**
 ```
 typedef struct {
     DataType *data;         // 数据数组
