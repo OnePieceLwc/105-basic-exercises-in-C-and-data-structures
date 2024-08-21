@@ -20,7 +20,7 @@ void LevelOrderTraversal(Bitree T) {
 }
 
 
-//	77.用领接表实现广度优先搜索算法
+//	77.用邻接表实现广度优先搜索算法
 void BFStraverse(ALGraph* q) {
     bool visit[Max_num] = {false};    // 初始化访问数组，记录每个节点是否被访问过。
     Queue Q;	//创建 队列
@@ -68,7 +68,7 @@ void BFS(ALGraph* G, int i, bool visit[]) {
     }
 }
 
-//	79.用领接表实现深度优先搜索算法
+//	79.用邻接表实现深度优先搜索算法
 void DFStraverse(ALGraph* q) {
     bool visit[Max_num] = {false}; // 初始化访问数组
     for (int i = 0; i < q->vexnum; i++) {
@@ -88,7 +88,7 @@ void DFS(ALGraph* q, int i, bool visit[]) {
     }
 }	
 	
-//	80.用领接矩阵实现深度优先搜索算法
+//	80.用邻接矩阵实现深度优先搜索算法
 void DFS(ALGraph* G, int i, bool visit[]) {
     visit[i] = true; // 标记当前节点为已访问
     printf("%d ", i); // 访问节点
