@@ -41,7 +41,7 @@ typedef struct Bitnode {
 ```
 
 ### **图的邻接表的数据结构:**
-**常用:     遍历时初始化:ArcNode（*） p = q->vertices[v].firstarc    对第一个邻接点操作：w = p->adjvex    下一个:p = p->nextarc   图的大小：G->vexnum   
+**常用:     遍历时初始化:ArcNode（*） p = q->vertices[v].firstarc    对第一个邻接点操作：w = p->adjvex    下一个:p = p->nextarc   图的大小：G->vexnum**
 ```
 // 定义图的邻接表节点
 typedef struct ArcNode {
@@ -62,7 +62,7 @@ typedef struct ALGraph {
 ```
 
 ### **图的邻接矩阵的数据结构:**
-**常用:  值：G->edge[v][j]  1有边0无边 图的大小：G->vexnum
+**常用:  值：G->edge[v][j]  1有边0无边 图的大小：G->vexnum**
 ```
 typedef struct {
     int edge[Max_num][Max_num]; // 邻接矩阵
