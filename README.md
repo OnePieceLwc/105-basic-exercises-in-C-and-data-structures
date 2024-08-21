@@ -20,7 +20,7 @@ typedef struct {
 } LinkList;
 ```
 
-### **有序顺序表:**
+### **有序顺序表的数据结构:**
 **常用: Seqlist  A;   A.length  A.data[i]**
 ```
 typedef struct {
@@ -38,6 +38,68 @@ typedef struct Bitnode {
     DataType data;
     struct Bitnode *lchild, *rchild;
 } Bitnode, *Bitree;
+```
+
+### **图的邻接表的数据结构:**
+**常用: 
+```
+// 定义图的邻接表节点
+typedef struct ArcNode {
+    int adjvex; // 该边所指向的顶点的位置
+    struct ArcNode* nextarc; // 指向下一个邻接点
+} ArcNode;
+
+// 定义图的邻接表
+typedef struct VNode {
+    ArcNode* firstarc; // 指向第一个邻接点
+} VNode;
+
+typedef struct ALGraph {
+    VNode vertices[Max_num]; // 图的顶点数组
+    int vexnum; // 图的顶点数
+    int edgenum; // 图的边数
+} ALGraph;
+```
+
+### **图的邻接矩阵的数据结构:**
+**常用: 
+```
+typedef struct {
+    int edge[Max_num][Max_num]; // 邻接矩阵
+    int vexnum; // 图的顶点数
+    int edgenum; // 图的边数
+} AMGraph;
+```
+
+### **队列的数据结构:**
+**常用:  初始化队列：InitQueue(Q)    判断队列是否为空：IsEmpty(Q)  入队操作：Enqueue(Q,value)   出队操作：Dequeue(Q)**
+```
+// 定义队列节点
+typedef struct QueueNode {
+    int data; // 队列数据
+    struct QueueNode* next; // 指向下一个节点
+} QueueNode;
+
+// 定义队列
+typedef struct Queue {
+    QueueNode* front; // 队头
+    QueueNode* rear; // 队尾
+} Queue;
+```
+
+### **栈的数据结构:**
+**常用:  初始化栈：InitStack(Q)    判断栈是否为空：IsStackEmpty(Q)  入栈操作：Push(Q,value)   出栈操作：Pop(Q)**
+```
+// 定义栈节点
+typedef struct StackNode {
+    int data; // 栈数据
+    struct StackNode* next; // 指向下一个节点
+} StackNode;
+
+// 定义栈
+typedef struct Stack {
+    StackNode* top; // 栈顶
+} Stack;
 ```
 
 ## **100道**
