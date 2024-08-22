@@ -30,6 +30,16 @@ typedef struct {
 } SeqList;
 ```
 
+### **二叉树的数据结构:**
+**常用: T->lchild     T->rchild      T->data**
+```
+typedef int DataType;
+typedef struct Bstnode {
+    DataType data;
+    struct Bstnode *lchild, *rchild;
+} Bstnode, *Bstree;
+```
+
 ### **树的数据结构:**
 **常用: T->lchild     T->rchild      T->data**
 ```
