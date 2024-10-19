@@ -121,7 +121,7 @@ LiukList func(LiukList &A){
 		ra->next=p;	//尾 
 		ra=p;	//尾
 		p=p->next;
-		while(q!=NULL){
+		while(p!=NULL){
 			q=p->next;
 			p->next=B->next;	//头 
 			B->next=p;	//头
