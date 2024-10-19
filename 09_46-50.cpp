@@ -115,19 +115,21 @@ LiukList func(LiukList &A){
 	LiukList B=(LiukList)malloc (sizeod(Lnode));
 	B->next=NULL;
 	
-	Lnode *p=A->next;
-	A->next=NULL;
-	while(p){
-		Lnode *q=p->next;
+	Lnode *p=A->next,*q;
+	Lnode *ra=A;
+	while(p!=NULL){
 		ra->next=p;	//尾 
 		ra=p;	//尾
-		while(q){
-			p=q;
-			q=q->next;
+		p=p->next;
+		while(q!=NULL){
+			q=p->next;
 			p->next=B->next;	//头 
 			B->next=p;	//头
+			p=q;
 		}
-	}  
+	} 
+	ra->next=NULL;
+	return B;
 }
 
 	return 0;
