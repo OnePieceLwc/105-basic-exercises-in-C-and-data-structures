@@ -111,25 +111,30 @@ Lnode *func(LiukList L1,LiukList L2){
 
 
 //	50.设 C={a1,bi,a2,b...,an,b,}为线性表，采用带头结点的单链表存放，设计一个就地算法将其拆分为两个线性表，使得 A-{a1,a2,….,an}，B={b.,...,b2, bi}。
-LiukList func(LiukList &A){
-	LiukList B=(LiukList)malloc (sizeod(Lnode));
-	B->next=NULL;
-	
-	Lnode *p=A->next,*q;
-	Lnode *ra=A;
-	while(p!=NULL){
-		ra->next=p;	//尾 
-		ra=p;	//尾
-		p=p->next;
-		while(p!=NULL){
-			q=p->next;
-			p->next=B->next;	//头 
-			B->next=p;	//头
-			p=q;
-		}
-	} 
-	ra->next=NULL;
-	return B;
+LiukList splitList(LiukList& A) {
+    LiukList B = new Lnode; // 分配 B 链表的头结点
+    B->next = nullptr;
+
+    Lnode* p = A;
+    Lnode* a = A; 
+    Lnode* b = B; 
+
+    while (p->next != NULL) {
+        a->next = p->next;
+        a = a->next;
+        p = a->next;
+
+        if (p != NULL) {
+            b->next = p;
+            b = b->next;
+            p = p->next;
+        }
+    }
+
+    a->next = NULL;
+    b->next = NULL;
+
+    return B;
 }
 
 	return 0;
