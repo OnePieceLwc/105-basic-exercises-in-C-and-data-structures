@@ -57,7 +57,7 @@ void Del_x(LiukList &L,int min,int max){
 
 //	49.给定两个单链表，试分析找出两个链表的公共结点。
 //	暴力破解 
-void * publis_node(LiukList L1,LiukList L2){
+Lnode * publis_node(LiukList L1,LiukList L2){
 	Lnode *p=L1->next;
 	Lnode *q=L2->next;
 	while(p){
@@ -70,7 +70,7 @@ void * publis_node(LiukList L1,LiukList L2){
 		p=p->next;
 		q=L2->next;
 	}
-	return 0;
+	return NULL;
 } 
 
 //	最优解 
