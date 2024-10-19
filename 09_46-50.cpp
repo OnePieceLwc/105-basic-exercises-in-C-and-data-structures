@@ -8,7 +8,7 @@ int main() {
 void Del_x(LiukList &L,int x){
 	Lnode *pre=L,*p=L->next;
 	while(p){
-		if(p->data=x){
+		if(p->data==x){
 			pre->next=p->next;
 			free(p);
 			p=pre->next;
