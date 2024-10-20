@@ -62,7 +62,7 @@ LiukList Find_same(LiukList A, LiukList B) {
 //三个指针 p、q 和 pre，分别指向 A 链表、B 链表和 A 链表的当前节点。
 //代码遍历两个链表，比较 p 和 q 指向的节点数据，如果相同，则继续遍历；
 //否则，将 q 指针重置为 B 链表的头部，并将 p 指针指向 pre 的下一个节点。
-void Find_x(LiukList A,LiukList B){
+int  Find_x(LiukList A,LiukList B){
 	Lnode *p=A,*q=B,*pre=A;
 	while(p && q){
 		if(p->data == p->data){
