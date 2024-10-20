@@ -10,7 +10,7 @@ void Del_same(LiukList &L){
 	if(p==NULL){
 		return 0;
 	}
-	while(p->data != NULL){
+	while(p->next != NULL){
 		q=p->next;
 		if(p->data=q->data){
 			p->next=q->next;
@@ -25,11 +25,11 @@ void Del_same(LiukList &L){
 } 	
 
 //	52.设A和B是两个单链表(带头结点)，其中元素递增有序。设计一个算法从 A 和B中的公共元素产生单链表 C，要求不破坏 A、B 的结点。
-void Find_same(LiukList A, LiukList B) {
-    Lnode *p = A->head->next, *q = B->head->next, *s;
+LiukList Find_same(LiukList A, LiukList B) {
+    Lnode *p = A->next, *q = B->next, *s;
     LiukList C = (LiukList)malloc(sizeof(Lnode));
-    C->head = NULL;
-    Lnode *r = C->head;
+    C->next = NULL;
+    Lnode *r = C->next;
 	// p、q 和 r，分别指向 A 链表、B 链表和新链表 C 的当前节点
     while (p != NULL && q != NULL) {
         if (p->data < q->data) {
@@ -53,6 +53,8 @@ void Find_same(LiukList A, LiukList B) {
             q = q->next;
         }
     }
+    r->next=NULL;
+    return C;
 }
 
 
