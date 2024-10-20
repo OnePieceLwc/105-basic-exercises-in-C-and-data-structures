@@ -24,7 +24,7 @@ void Del_same(LiukList &L){
 	
 } 	
 
-//	52.设A和B是两个单链表(带头结点)，其中元素递增有序。设计一个算法从 A 和B中的公素产生单链表 C，要求不破坏 A、B 的结点。
+//	52.设A和B是两个单链表(带头结点)，其中元素递增有序。设计一个算法从 A 和B中的公共元素产生单链表 C，要求不破坏 A、B 的结点。
 void Find_same(LiukList A, LiukList B) {
     Lnode *p = A->head->next, *q = B->head->next, *s;
     LiukList C = (LiukList)malloc(sizeof(Lnode));
