@@ -107,14 +107,14 @@ int fun(Linklist L){
 		slow=r;
 	}
 	p=L;
-	Lnode *Q=newheaf;
+	Lnode *q=newheaf;
 	int max=0;
 	while(p){
 		if(p->data+q->data>max){
 			max=p->data+q->data;
-			p=p->next;
-			q=q->next;
 		}
+		p=p->next;
+		q=q->next;
 	}
 	return max;
 }
