@@ -49,15 +49,13 @@ LNode* Locate(LNode* L, int x) {
         }
         // 找到插入位置
         while (q != L && p->freq <= q->freq) {
-            q = q->next;
+            q = q->pre;
         }
         // 插入p到q之后
         p->next = q->next;
-        if (q->next != NULL) {
-            q->next->pre = p;
-        }
-        q->next = p;
+        p->next->pre = p;
         p->pre = q;
+        q->next = q;
         return p;
     }
 }
