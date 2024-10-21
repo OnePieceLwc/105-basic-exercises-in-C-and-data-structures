@@ -100,11 +100,11 @@ int fun(Linklist L){
 		fast=fast->next->next;
 	} 
 	Lnode *newhead=NULL,*r;
-	while(s){
-		r=s->next;
-		s->next=newhead;
-		newhead=s;
-		s=r;
+	while(slow){
+		r=slow->next;
+		slow->next=newhead;
+		newhead=slow;
+		slow=r;
 	}
 	p=L;
 	Lnode *Q=newheaf;
