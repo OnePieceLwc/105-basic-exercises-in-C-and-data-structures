@@ -24,9 +24,9 @@ void fun(Liuklist &L,int k){
 
 //	57.设有一个带头结点的非循环双链表L，其每个结点中除有 pre、data 和 next 域外,还有一个访问频度域 freq,其值均初始化为零。每当在链表中进行一次 Locate(L,x)运算时，令值为x的结点中 freg 域的值增1，并使此链表中的结点保持按访问频度递减的顺序排列，且最近访问的结点排在频度相同的结点之前，以便使频繁访问的结点总是靠近表头。试编写符合上述要求的 Locate(L,x)函数，返回找到结点的地址，类型为指针型。
 //用于查找值为 x 的节点，并更新其访问频度。若找到节点，则将其移动到合适的位置以保持频度递减的顺序。时间复杂度为O(n)，空间复杂度为O(1)
-DNode* Locate(DNode* L, int x) {
-    DNode* p = L->next; // 从头结点的下一个开始
-    DNode* q;
+LNode* Locate(LNode* L, int x) {
+    LNode* p = L->next; // 从头结点的下一个开始
+    LNode* q;
     // 找到值为x的节点
     while (p && p->data != x) {
         p = p->next;
