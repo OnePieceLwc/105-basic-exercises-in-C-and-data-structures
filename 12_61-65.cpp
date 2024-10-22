@@ -123,16 +123,16 @@ Linklist func(Linklist &L){
 	Lnode *p=L->next->next;		//p 指向链表中第三个节点
 	L->next->next=NULL;		//断链  
 	
-	Lnode *pre,*r;
+	Lnode *pre,*q;
 	while(p){
-		r=p->next;		//头插防断链 
+		q=p->next;		
 		pre=L;		//从头开始 
 		while(p->next->data < pre->data && p->next!=NULL){
 			pre=pre->next;
 		}		//找到插入位置 
 		p->next=pre->next;
 		pre->next=p;
-		p=r;
+		p=q;
 	}	
 }
 
