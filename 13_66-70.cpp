@@ -48,17 +48,17 @@ bool func(seqlist A,seqlist B,seqlist C){
 	}
 	int i=0,j=0,k=0;
 	while(i<A.lenth && i<b.lenth){
-		if(A.data[i]<=B.data[i]){
-			C.data[k++]=A.data[i];
+		if(A.data[i]<=B.data[j]){
+			C.data[k++]=A.data[i++];
 		}else{
-			C.data[k++]=B.data[i];
+			C.data[k++]=B.data[j++];
 		}
 	}
 	while(i<A.lenth){
-		C.data[k++]=A.data[i];
+		C.data[k++]=A.data[i++];
 	}
 	while(i<B.lenth){
-		C.data[k++]=B.data[i];
+		C.data[k++]=B.data[j++];
 	}	
 	C.length=k;
 	return 1;
